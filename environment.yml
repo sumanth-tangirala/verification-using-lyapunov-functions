@@ -1,0 +1,25 @@
+name: lyapunov_nn
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch=2.5.*
+  - pytorch-cuda=12.1
+  - numpy>=2.0
+  - scipy>=1.15
+  - matplotlib>=3.10
+  - pandas>=2.0
+  - scikit-learn>=1.7
+  - tqdm
+  - pyyaml
+  - pip
+  - pip:
+    - neuromancer>=1.5
+    - python-dotenv
+    - cvxpy>=1.7
+    - cvxpylayers
+    - wandb
+    - pytorch-lightning>=2.0
