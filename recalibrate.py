@@ -14,7 +14,11 @@ import argparse
 import json
 from pathlib import Path
 
+from dotenv import load_dotenv
 import torch
+
+# Load environment variables from .env file
+load_dotenv()
 from torch.utils.data import DataLoader
 
 from lyapunov_basins.systems import get_system_config, get_data_dir

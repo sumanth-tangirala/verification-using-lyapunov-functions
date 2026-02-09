@@ -1,15 +1,20 @@
 """System configurations and state encoding for Lyapunov training."""
 
 import json
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Tuple
 
+from dotenv import load_dotenv
 import torch
 from torch import Tensor
 
 
-DATA_BASE_DIR = Path("/common/users/shared/pracsys/genMoPlan/data_trajectories")
+# Load environment variables from .env file
+load_dotenv()
+
+DATA_BASE_DIR = Path(os.environ.get("DATA_DIR", "/common/users/shared/pracsys/genMoPlan/data_trajectories"))
 
 
 @dataclass

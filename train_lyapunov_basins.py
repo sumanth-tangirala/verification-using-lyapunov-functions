@@ -9,13 +9,18 @@ Usage:
 
 import argparse
 import json
+import os
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 import shutil
 from typing import Dict, Optional
 
+from dotenv import load_dotenv
 import torch
+
+# Load environment variables from .env file
+load_dotenv()
 import torch.nn as nn
 from torch.utils.data import DataLoader, WeightedRandomSampler
 from tqdm import tqdm
@@ -150,7 +155,7 @@ def parse_args():
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="outputs",
+        default=os.environ.get("OUTPUT_DIR", "outputs"),
         help="Directory for saving models and logs",
     )
     parser.add_argument(

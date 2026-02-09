@@ -10001,3 +10001,6 @@ env/lib/python3.10/site-packages/matplotlib-3.10.8.dist-info/LICENSE
 env/lib/python3.10/site-packages/matplotlib-3.10.8.dist-info/METADATA
 env/lib/python3.10/site-packages/matplotlib-3.10.8.dist-info/RECORD
 env/lib/python3.10/site-packages/matplotlib-3.10.8.dist-info/WHEEL
+
+# Environment variables
+.env
